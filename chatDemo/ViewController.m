@@ -10,6 +10,8 @@
 #import "YYKit.h"
 #import "chatModel.h"
 #import "chatMsgTableViewCell.h"
+#import "chatMsgImageCell.h"
+
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic)UITableView * tableview;
 @property(strong,nonatomic)chatModel * chatMM;
@@ -30,17 +32,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    self.title = @"聊天排版";
       self.view.backgroundColor = WHITE_COLOR;
     [self.view addSubview:self.tableview];
     
    // dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        self.chatMM = [[chatModel alloc]init];
+    
         NSString *emojiFilePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"emotionImage.plist"];
         _emojiDic = [[NSDictionary alloc] initWithContentsOfFile:emojiFilePath];
         _mapper = [NSMutableDictionary new];
-        
+    self.chatMM = [[chatModel alloc]initWithEmotiomDic:_emojiDic];
         for(NSString * key in _emojiDic.allKeys)
         {
             NSString * values = _emojiDic[key];
@@ -84,20 +86,57 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    chatMsgTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
-    if (cell == nil) {
-        cell = [[chatMsgTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellID"];
-        [cell setCellWithMapper:_mapper];
+    
+    msgModel * msgMM = self.chatMM.msgMutableAry[indexPath.row];
+    
+  
+    
+    switch (msgMM.type) {
+        case text:
+        {
+            chatMsgTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
+            if (cell == nil) {
+                cell = [[chatMsgTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellID"];
+                [cell setCellWithMapper:_mapper];
+            }
+            [cell setMsgCellWithMsgMM:msgMM];
+            return cell;
+        }
+            break;
+        case image:
+        {
+            chatMsgImageCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID1"];
+            if (cell == nil) {
+                cell = [[chatMsgImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellID1"];
+                [cell setCellWithMapper:_mapper];
+            }
+            [cell setMsgCellWithMsgMM:msgMM];
+            return cell;
+        }
+            break;
+        default:
+            return nil;
+            break;
     }
-    [cell setMsgCellWithMsgMM:self.chatMM.msgMutableAry[indexPath.row]];
-    return cell;
+ 
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
  
+     msgModel * msgMM = self.chatMM.msgMutableAry[indexPath.row];
     
-    return 60;
+    switch (msgMM.type) {
+        case text:
+            return msgMM.msgTextSize.height+60;
+            break;
+        case image:
+            return SCREEN_WIDTH/2+40;
+        default:
+            return 60;
+            break;
+    }
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,7 +147,7 @@
 -(UITableView *)tableview
 {
     if (!_tableview) {
-        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATION_BAR_HEIGHT) style:UITableViewStylePlain];
+        _tableview = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT-NAVIGATION_BAR_HEIGHT) style:UITableViewStylePlain];
         _tableview.delegate = self;
         _tableview.dataSource = self;
         _tableview.separatorStyle = 0;

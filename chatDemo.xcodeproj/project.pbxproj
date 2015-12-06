@@ -365,6 +365,10 @@
 		F1125F501C11EEB200365417 /* w_xianhua@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1125E5B1C11EEB200365417 /* w_xianhua@2x.png */; settings = {ASSET_TAGS = (); }; };
 		F1125F511C11EEB200365417 /* w_xiayu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1125E5C1C11EEB200365417 /* w_xiayu@2x.png */; settings = {ASSET_TAGS = (); }; };
 		F1125F521C11EEB200365417 /* w_yueliang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1125E5D1C11EEB200365417 /* w_yueliang@2x.png */; settings = {ASSET_TAGS = (); }; };
+		F1C4BADB1C141ED70001B679 /* chatMsgImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C4BADA1C141ED70001B679 /* chatMsgImageCell.m */; settings = {ASSET_TAGS = (); }; };
+		F1C4BAE11C142FB40001B679 /* paoPaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C4BAE01C142FB40001B679 /* paoPaoView.m */; settings = {ASSET_TAGS = (); }; };
+		F1C4BAE41C1438FC0001B679 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C4BAE31C1438FC0001B679 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F1C4BAE61C143A320001B679 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C4BAE51C143A320001B679 /* libicucore.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -846,6 +850,13 @@
 		F1125E5B1C11EEB200365417 /* w_xianhua@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_xianhua@2x.png"; sourceTree = "<group>"; };
 		F1125E5C1C11EEB200365417 /* w_xiayu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_xiayu@2x.png"; sourceTree = "<group>"; };
 		F1125E5D1C11EEB200365417 /* w_yueliang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "w_yueliang@2x.png"; sourceTree = "<group>"; };
+		F1C4BAD91C141ED70001B679 /* chatMsgImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatMsgImageCell.h; sourceTree = "<group>"; };
+		F1C4BADA1C141ED70001B679 /* chatMsgImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatMsgImageCell.m; sourceTree = "<group>"; };
+		F1C4BADF1C142FB40001B679 /* paoPaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paoPaoView.h; sourceTree = "<group>"; };
+		F1C4BAE01C142FB40001B679 /* paoPaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = paoPaoView.m; sourceTree = "<group>"; };
+		F1C4BAE21C1438FC0001B679 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		F1C4BAE31C1438FC0001B679 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		F1C4BAE51C143A320001B679 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -853,6 +864,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C4BAE61C143A320001B679 /* libicucore.tbd in Frameworks */,
 				F1125D3F1C11D64800365417 /* libz.tbd in Frameworks */,
 				F1125D3D1C11D64300365417 /* libsqlite3.tbd in Frameworks */,
 				F1125D3B1C11D63E00365417 /* SystemConfiguration.framework in Frameworks */,
@@ -889,6 +901,7 @@
 		F1125BE01C11CB8000365417 = {
 			isa = PBXGroup;
 			children = (
+				F1C4BAE51C143A320001B679 /* libicucore.tbd */,
 				F1125D3E1C11D64800365417 /* libz.tbd */,
 				F1125D3C1C11D64300365417 /* libsqlite3.tbd */,
 				F1125D3A1C11D63E00365417 /* SystemConfiguration.framework */,
@@ -934,6 +947,8 @@
 				F1125BF31C11CB8000365417 /* ViewController.m */,
 				F1125D421C11DD5B00365417 /* chatMsgTableViewCell.h */,
 				F1125D431C11DD5B00365417 /* chatMsgTableViewCell.m */,
+				F1C4BAD91C141ED70001B679 /* chatMsgImageCell.h */,
+				F1C4BADA1C141ED70001B679 /* chatMsgImageCell.m */,
 				F1125BF51C11CB8000365417 /* Main.storyboard */,
 				F1125BF81C11CB8000365417 /* Assets.xcassets */,
 				F1125BFA1C11CB8000365417 /* LaunchScreen.storyboard */,
@@ -943,6 +958,8 @@
 				F1125D401C11D85300365417 /* Property List.plist */,
 				F1125D4A1C11DEF000365417 /* NSString+Category.h */,
 				F1125D4B1C11DEF000365417 /* NSString+Category.m */,
+				F1C4BADF1C142FB40001B679 /* paoPaoView.h */,
+				F1C4BAE01C142FB40001B679 /* paoPaoView.m */,
 			);
 			path = chatDemo;
 			sourceTree = "<group>";
@@ -1252,6 +1269,8 @@
 		F1125D541C11E9FF00365417 /* text UI */ = {
 			isa = PBXGroup;
 			children = (
+				F1C4BAE21C1438FC0001B679 /* RegexKitLite.h */,
+				F1C4BAE31C1438FC0001B679 /* RegexKitLite.m */,
 				F1125D551C11EA1C00365417 /* DCCrossHairView.h */,
 				F1125D561C11EA1C00365417 /* DCCrossHairView.m */,
 				F1125D571C11EA1C00365417 /* DCFrameView.h */,
@@ -1944,6 +1963,7 @@
 				F1125D1F1C11CC0400365417 /* YYTransaction.m in Sources */,
 				F1125D101C11CC0400365417 /* YYTextRubyAnnotation.m in Sources */,
 				F1125D631C11EA1C00365417 /* DCFrameView.m in Sources */,
+				F1C4BADB1C141ED70001B679 /* chatMsgImageCell.m in Sources */,
 				F1125CDA1C11CC0400365417 /* NSObject+YYAddForKVO.m in Sources */,
 				F1125D441C11DD5B00365417 /* chatMsgTableViewCell.m in Sources */,
 				F1125BF11C11CB8000365417 /* AppDelegate.m in Sources */,
@@ -1955,6 +1975,7 @@
 				F1125CE71C11CC0400365417 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				F1125CEF1C11CC0400365417 /* YYDiskCache.m in Sources */,
 				F1125D121C11CC0400365417 /* YYTextUtilities.m in Sources */,
+				F1C4BAE11C142FB40001B679 /* paoPaoView.m in Sources */,
 				F1125D241C11CDFC00365417 /* chatModel.m in Sources */,
 				F1125CE51C11CC0400365417 /* UIDevice+YYAdd.m in Sources */,
 				F1125D191C11CC0400365417 /* YYKeychain.m in Sources */,
@@ -1978,6 +1999,7 @@
 				F1125CE61C11CC0400365417 /* UIFont+YYAdd.m in Sources */,
 				F1125CEE1C11CC0400365417 /* YYCache.m in Sources */,
 				F1125CEC1C11CC0400365417 /* UITextField+YYAdd.m in Sources */,
+				F1C4BAE41C1438FC0001B679 /* RegexKitLite.m in Sources */,
 				F1125D641C11EA1C00365417 /* DCIntrospect.m in Sources */,
 				F1125CF11C11CC0400365417 /* YYMemoryCache.m in Sources */,
 				F1125CE11C11CC0400365417 /* UIBarButtonItem+YYAdd.m in Sources */,

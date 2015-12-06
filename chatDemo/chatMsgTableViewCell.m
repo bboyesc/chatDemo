@@ -19,11 +19,11 @@
     [self.contentView addSubview:_HeadImageBtn];
     
     
-    _paopaoView = [[UIImageView alloc]init];
+    _paopaoView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH/2, SCREEN_WIDTH/2)];
     
     [self.contentView addSubview:_paopaoView];
     
-    _msgTextView = [YYTextView new];
+    _msgTextView = [YYLabel new];
     
     _parser = [[YYTextSimpleEmoticonParser alloc]init];
     _parser.emoticonMapper = mapper;
@@ -31,18 +31,16 @@
     _msgTextView.font = [UIFont systemFontOfSize:14];
     _msgTextView.textColor = BLACK_COLOR;
     _msgTextView.textParser = _parser;
-    _msgTextView.textVerticalAlignment = YYTextVerticalAlignmentTop;
-    
-  
+    //_msgTextView.textVerticalAlignment = YYTextVerticalAlignmentTop;
+    _msgTextView.numberOfLines =0;
+    _msgTextView.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+    _msgTextView.displaysAsynchronously = NO;
+    _msgTextView.ignoreCommonProperties = NO;
+    _msgTextView.fadeOnHighlight = NO;
+    _msgTextView.fadeOnAsynchronouslyDisplay = NO;
     
     _msgTextView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
-    if (IS_IOS_7) {
-        _msgTextView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
-    }
-    
-    _msgTextView.scrollEnabled = NO;
-    _msgTextView.editable = NO;
 
     [_paopaoView addSubview:_msgTextView];
 
@@ -51,38 +49,49 @@
 -(void)setMsgCellWithMsgMM:(msgModel*)msgMM
 {
     
-    UIImage *normal;
+    UIImage * normal;
     if (msgMM.sendtype == otherSend) {
     
         
        normal = [UIImage imageNamed:@"chatto_bg_normal"];
-        normal = [normal resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 10, 30)];
+       // normal = [normal resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 10, 30)];
+        UIEdgeInsets edge=UIEdgeInsetsMake(35, 10, 10,22);
+
+        normal= [normal resizableImageWithCapInsets:edge resizingMode:UIImageResizingModeStretch];
+        //[_paopaoView setLayerWithImage:[UIImage imageNamed:@"chatto_bg_normal"]];
+        _paopaoView.image = normal;
     }
     else{
 
         normal = [UIImage imageNamed:@"chatfrom_bg_normal"];
-        normal = [normal resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 10, 30)];
+       // normal = [normal resizableImageWithCapInsets:UIEdgeInsetsMake(20, 10, 10, 30)];
+        UIEdgeInsets edge=UIEdgeInsetsMake(35, 22, 10,10);
+    
+           normal= [normal resizableImageWithCapInsets:edge resizingMode:UIImageResizingModeStretch];
+        _paopaoView.image = normal;
+        //[_paopaoView setLayerWithImage:[UIImage imageNamed:@"chatfrom_bg_normal"]];
     }
 //    
-    _paopaoView.image = normal;
-    _paopaoView.size = CGSizeMake(msgMM.msgTextSize.width+30, msgMM.msgTextSize.height+20);
-  
-    _msgTextView.text = msgMM.msgText;
-    _msgTextView.size = CGSizeMake(msgMM.msgTextSize.width, msgMM.msgTextSize.height+10);
-    _msgTextView.contentSize = msgMM.msgTextSize;
     
+   
+    
+    _msgTextView.size = msgMM.msgTextSize;
+    //_msgTextView.text = msgMM.msgText;
+    _msgTextView.textLayout = msgMM.textLayout;
+    _msgTextView.height =msgMM.textHeight;
+    _paopaoView.size = CGSizeMake(_msgTextView.width+20, _msgTextView.height+5);
     if (msgMM.sendtype==meSend) {
         [_HeadImageBtn setPosition:CGPointMake(10, 10) atAnchorPoint:CGPointMake(0, 0)];
         
         [_paopaoView setPosition:CGPointMake(_HeadImageBtn.x+_HeadImageBtn.width, 20) atAnchorPoint:CGPointMake(0, 0)];
-        [_msgTextView setPosition:CGPointMake(20, 10) atAnchorPoint:CGPointMake(0, 0)];
+        [_msgTextView setPosition:CGPointMake(15, 0) atAnchorPoint:CGPointMake(0, 0)];
     }
     else
     {
         [_HeadImageBtn setPosition:CGPointMake(SCREEN_WIDTH-10, 10) atAnchorPoint:CGPointMake(1, 0)];
         
         [_paopaoView setPosition:CGPointMake(_HeadImageBtn.x, 20) atAnchorPoint:CGPointMake(1, 0)];
-        [_msgTextView setPosition:CGPointMake(10, 10) atAnchorPoint:CGPointMake(0, 0)];
+        [_msgTextView setPosition:CGPointMake(5, 0) atAnchorPoint:CGPointMake(0, 0)];
     }
  
     

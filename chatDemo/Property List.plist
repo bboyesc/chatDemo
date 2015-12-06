@@ -2,49 +2,255 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>hahahaha</string>
-	<string>nihaosddjfkejlksdf</string>
-	<string>asdklfjkeljasdf</string>
-	<string>你好怂死对方</string>
-	<string>撒旦发达发的撒fads发生的大事f</string>
-	<string>[哈哈][好爱哦]asd few asddf d</string>
-	<string>[笑哈哈][好爱哦]asd few asddf d</string>
-	<string>[哈哈]asd few asddf d[好爱哦]</string>
-	<string>[哈哈]asd few asddf d[好爱哦]</string>
-	<string>[哈哈]asd few asddf d[好爱哦]</string>
-	<string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>hahahaha</string>
-    <string>nihaosddjfkejlksdf</string>
-    <string>asdklfjkeljasdf</string>
-    <string>你好怂死对方</string>
-    <string>撒旦发达发的撒fads发生的大事f</string>
-    <string>[哈哈][好爱哦]asd few asddf d</string>
-    <string>[笑哈哈][好爱哦]asd few asddf d</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>hahahaha</string>
-    <string>nihaosddjfkejlksdf</string>
-    <string>asdklfjkeljasdf</string>
-    <string>你好怂死对方</string>
-    <string>撒旦发达发的撒fads发生的大事f</string>
-    <string>[哈哈][好爱哦]asd few asddf d</string>
-    <string>[笑哈哈][好爱哦]asd few asddf d</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>hahahaha</string>
-    <string>nihaosddjfkejlksdf</string>
-    <string>asdklfjkeljasdf</string>
-    <string>你好怂死对方</string>
-    <string>撒旦发达发的撒fads发生的大事f</string>
-    <string>[哈哈][好爱哦]asd few asddf d</string>
-    <string>[笑哈哈][好爱哦]asd few asddf d</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-    <string>[哈哈]asd few asddf d[好爱哦]</string>
-</array>
+	<dict>
+		<key>type</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>nihaosddjfkejlksdf</string>
+	</dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict><dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict><dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>nihaosddjfkejlksdf</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦][哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>1</integer>
+        <key>text</key>
+        <string>[哈哈]asd few asddf d[好爱哦]</string>
+    </dict>
+    <dict>
+        <key>type</key>
+        <integer>2</integer>
+        <key>text</key>
+        <string>http://imgsrc.baidu.com/forum/w%3D580/sign=c1092901a2efce1bea2bc8c29f53f3e8/bbfd2901213fb80e2a0a0b2033d12f2eb8389406.jpg</string>
+    </dict>
+    </array>
 </plist>
