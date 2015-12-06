@@ -1,0 +1,171 @@
+//
+//  PrefixHeader.pch
+//  Qixin
+//
+//  Created by Ansty on 14/10/26.
+//  Copyright (c) 2014年 Ansty. All rights reserved.
+//
+
+#ifndef Qixin_PrefixHeader_pch
+#define Qixin_PrefixHeader_pch
+ #ifdef __OBJC__
+#import <Availability.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "UIView+Frame.h"
+#import "NSString+Category.h"
+//服务器配置宏
+
+
+#define SERVER @"pumasoft.com.cn"
+#define RESOURCE @"Qixin"
+#define INT2STR(intValue) [NSString stringWithFormat:@"%li", intValue]
+
+
+
+#endif
+#endif
+
+//是否是ios7
+#define DEVICE_VERSION ((double)[UIDevice currentDevice].systemVersion.floatValue)
+
+#define IS_IOS_7 (DEVICE_VERSION >= (double)7)
+#define IS_IOS_8 (DEVICE_VERSION >= (double)8)
+#define IOS_7_OFFSET_Y ((IS_IOS_7) ? 20 : 0)
+#define NAVIGATION_BAR_HEIGHT ((IS_IOS_7) ? 64 : 44)
+#define UIDEVICEMODEL [UIDevice currentDevice].model;
+#define TAB_BAR_HEIGHT 49
+
+//微信
+#define WXAPPID @"wxf203f772f86b62a1"
+#define WXAPPSECRET @"0494e9a324f51804558ea9d49ab2e5db"
+
+//qq
+#define QQAPPID  @"1103523273"
+#define QQAPPKEY @"HKL9SNJ2rP4gn79W"
+//微博
+#define SINAAPPKEY @"3813038633"
+#define SINASECRET @"a288e662f086f90b5558aac565de208f"
+#define kRedirectURI @"https://api.weibo.com/oauth2/default.html"
+
+
+#define PhoneCellSize CGSizeMake(SCREEN_WIDTH/2-10, SCREEN_HEIGHT/2);
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define UIColorFromThreeRGB(redValue,greenValue,blueValue) [UIColor colorWithRed:redValue/255.0 green:greenValue/255.0 blue:blueValue/255.0 alpha:1.0]
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define UIColorFromRGBString(rgbValue) [UIColor colorWithRed:((float)((strtoul(((NSString *)rgbValue).UTF8String, 0, 16) & 0xFF0000) >> 16))/255.0 green:((float)((strtoul(((NSString *)rgbValue).UTF8String, 0, 16) & 0xFF00) >> 8))/255.0 blue:((float)(strtoul(((NSString *)rgbValue).UTF8String, 0, 16) & 0xFF))/255.0 alpha:1.0]
+
+
+#define Font14 [UIFont systemFontOfSize:14]
+#define Font15 [UIFont systemFontOfSize:15]
+#define  placeholder_image [UIImage imageNamed:@"btn_pic_s_nor.png"]
+#define  placeholder_image1 [UIImage imageNamed:@"iv_view.png"]
+
+#define MBProgressHUDhideHUDForView     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{[MBProgressHUD hideHUDForView:self.view];});
+
+#define WXSTATE @"wxework"
+#define qxImageUrlPR @"http://www.pumasoft.com.cn/temp/"
+
+#define BacknavBarItem  UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+
+#define MBProgressHUDHideForView dispatch_async(dispatch_get_main_queue(), ^{ [MBProgressHUD hideHUDForView:self.view];});
+//共享配置文件
+#define SHARED_CONFIGS [SharedConfigs sharedConfigs].config
+
+//qq
+#define kLoginSuccessed @"loginSuccessed"
+#define kLoginFailed    @"loginFailed"
+
+//颜色
+#define RED_COLOR [UIColor redColor]
+#define WHITE_COLOR [UIColor whiteColor]
+#define BLACK_COLOR [UIColor blackColor]
+#define BLUE_COLOR [UIColor blueColor]
+#define GRAY_COLOR [UIColor grayColor]
+#define WG_COLOR   [UIColor colorWithRed:244/255.0 green:244/255.0 blue:244/255.0 alpha:1];
+#define WG_COLOR1   [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1]
+#define TB_COLOR   [UIColor colorWithRed:246/255.0 green:246/255.0 blue:246/255.0 alpha:1]
+#define ORANGE_COLOR [UIColor orangeColor]
+#define LIGHT_GRAY_COLOR [UIColor lightGrayColor]
+#define CLEAR_COLOR [UIColor clearColor]
+
+
+//日志颜色
+#define XCODE_COLORS_ESCAPE @"\033["
+#define XCODE_COLORS_RESET_FG1  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG1  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET1     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+
+#define XCODE_COLORS_RED XCODE_COLORS_ESCAPE @"fg171,61,10;"
+#define XCODE_COLORS_BLUE XCODE_COLORS_ESCAPE @"fg62,121,255;"
+#define XCODE_COLORS_GREEN XCODE_COLORS_ESCAPE @"fg122,255,107;"
+#define XCODE_COLORS_YELLOW XCODE_COLORS_ESCAPE @"fg238,226,116;"
+
+#define NSLogRed(frmt, ...) NSLog((XCODE_COLORS_RED frmt XCODE_COLORS_RESET1), ##__VA_ARGS__)
+#define NSLogBlue(frmt, ...) NSLog((XCODE_COLORS_BLUE frmt XCODE_COLORS_RESET1), ##__VA_ARGS__)
+#define NSLogGreen(frmt, ...) NSLog((XCODE_COLORS_GREEN frmt XCODE_COLORS_RESET1), ##__VA_ARGS__)
+#define NSLogYellow(frmt, ...) NSLog((XCODE_COLORS_YELLOW frmt XCODE_COLORS_RESET1), ##__VA_ARGS__)
+
+
+/**
+ * Creates \c __weak shadow variables for each of the variables provided as
+ * arguments, which can later be made strong again with #strongify.
+ *
+ * This is typically used to weakly reference variables in a block, but then
+ * ensure that the variables stay alive during the actual execution of the block
+ * (if they were live upon entry).
+ *
+ * See #strongify for an example of usage.
+ */
+#define weakify(...) \
+ext_keywordify \
+metamacro_foreach_cxt(ext_weakify_,, __weak, __VA_ARGS__)
+
+/**
+ * Like #weakify, but uses \c __unsafe_unretained instead, for targets or
+ * classes that do not support weak references.
+ */
+#define unsafeify(...) \
+ext_keywordify \
+metamacro_foreach_cxt(ext_weakify_,, __unsafe_unretained, __VA_ARGS__)
+
+/**
+ * Strongly references each of the variables provided as arguments, which must
+ * have previously been passed to #weakify.
+ *
+ * The strong references created will shadow the original variable names, such
+ * that the original names can be used without issue (and a significantly
+ * reduced risk of retain cycles) in the current scope.
+ *
+ * @code
+ 
+ id foo = [[NSObject alloc] init];
+ id bar = [[NSObject alloc] init];
+ 
+ @weakify(foo, bar);
+ 
+ // this block will not keep 'foo' or 'bar' alive
+ BOOL (^matchesFooOrBar)(id) = ^ BOOL (id obj){
+ // but now, upon entry, 'foo' and 'bar' will stay alive until the block has
+ // finished executing
+ @strongify(foo, bar);
+ 
+ return [foo isEqual:obj] || [bar isEqual:obj];
+ };
+ 
+ * @endcode
+ */
+#define strongify(...) \
+ext_keywordify \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+metamacro_foreach(ext_strongify_,, __VA_ARGS__) \
+_Pragma("clang diagnostic pop")
+
