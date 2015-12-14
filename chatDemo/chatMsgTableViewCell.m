@@ -25,21 +25,21 @@
     
     _msgTextView = [YYLabel new];
     
-    _parser = [[YYTextSimpleEmoticonParser alloc]init];
-    _parser.emoticonMapper = mapper;
+    //_parser = [[YYTextSimpleEmoticonParser alloc]init];
+   // _parser.emoticonMapper = mapper;
     
     _msgTextView.font = [UIFont systemFontOfSize:14];
     _msgTextView.textColor = BLACK_COLOR;
-    _msgTextView.textParser = _parser;
+   // _msgTextView.textParser = _parser;
     //_msgTextView.textVerticalAlignment = YYTextVerticalAlignmentTop;
     _msgTextView.numberOfLines =0;
     _msgTextView.textVerticalAlignment = YYTextVerticalAlignmentCenter;
-    _msgTextView.displaysAsynchronously = NO;
-    _msgTextView.ignoreCommonProperties = NO;
+    _msgTextView.displaysAsynchronously = YES;
+    _msgTextView.ignoreCommonProperties = YES;
     _msgTextView.fadeOnHighlight = NO;
     _msgTextView.fadeOnAsynchronouslyDisplay = NO;
     
-    _msgTextView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0);
+ //   _msgTextView.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
 
     [_paopaoView addSubview:_msgTextView];
@@ -74,12 +74,12 @@
 //    
     
    
-    
-    _msgTextView.size = msgMM.msgTextSize;
+   
     //_msgTextView.text = msgMM.msgText;
     _msgTextView.textLayout = msgMM.textLayout;
-    _msgTextView.height =msgMM.textHeight;
-    _paopaoView.size = CGSizeMake(_msgTextView.width+20, _msgTextView.height+5);
+    _msgTextView.size = CGSizeMake(_msgTextView.textLayout.textBoundingSize.width, _msgTextView.textLayout.textBoundingSize.height);
+
+    _paopaoView.size = CGSizeMake(_msgTextView.textLayout.textBoundingSize.width+20, _msgTextView.textLayout.textBoundingSize.height+5);
     if (msgMM.sendtype==meSend) {
         [_HeadImageBtn setPosition:CGPointMake(10, 10) atAnchorPoint:CGPointMake(0, 0)];
         
@@ -93,7 +93,7 @@
         [_paopaoView setPosition:CGPointMake(_HeadImageBtn.x, 20) atAnchorPoint:CGPointMake(1, 0)];
         [_msgTextView setPosition:CGPointMake(5, 0) atAnchorPoint:CGPointMake(0, 0)];
     }
- 
+
     
     
 }

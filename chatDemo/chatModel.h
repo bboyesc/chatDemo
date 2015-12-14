@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, sendType) {
 #define kWBCellMSGTextColor UIColorHex(333333) // 消息文本字体颜色
 #define kWBCellPadding 0       // cell 内边距
 #define kWBCellPaddingText 10   // cell 文本与其他元素间留白
-#define kWBCellContentWidth (kScreenWidth - 2 * kWBCellPadding) // cell 内容宽度
+#define kWBCellContentWidth (SCREEN_WIDTH-40-10-20) // cell 内容宽度
 #define kWBCellTextHighlightBackgroundColor UIColorHex(bfdffe) // Link 点击背景色
 
 /**
